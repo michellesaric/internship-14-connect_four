@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, white, teal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__container {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 14px 13px 31px 0px rgba(28, 62, 66, 0.68);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.menu__container-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: teal;
+}
+
+.menu__container-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__container-form label {
+  margin-top: 20px;
+}
+
+.first-player--empty::after {
+  content: "You have to type in a name!";
+  color: red;
+  font-size: 13px;
+}
+.second-player--empty::after {
+  content: "You have to type in a name!";
+  color: red;
+  font-size: 13px;
+}
+
+.same-names::after {
+  content: "You typed in the same name!";
+  color: red;
+  font-size: 13px;
+}
+
+.submit-button {
+  margin-top: 40px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid black;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: teal;
+  color: white;
+}
+
+.submit-button:active {
+  transform: translateY(4px);
+}
+
+.board {
+  padding: 100px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.board-row {
+  background-color: rgb(59, 159, 192);
+}
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background-color: rgb(59, 159, 192);
+  border: 1px solid white;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+  height: 60px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.red {
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.yellow {
+  background-color: yellow;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.scoreboard {
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  margin-top: 10px;
+}
