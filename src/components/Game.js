@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Board from './Board'
+import ScoreBoard from './ScoreBoard';
 
 const Game = () => {
     return (

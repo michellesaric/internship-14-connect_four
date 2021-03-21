@@ -12,9 +12,25 @@ const Board = () => {
 
     const handleClick = (index) => {
         const newIndex = droppingDown(array.squares, index);
-        
+
         if (calculateWinner(array.squares) || array.squares[newIndex]) {
-            return;
+            if(calculateWinner(array.squares) === "red") {
+                alert("Player one has won!");
+                setArray({
+                    squares: Array(42).fill(null),
+                    isPlayerOneNext: true
+                })
+                return;
+            } else if (calculateWinner(array.squares) === "yellow") {
+                alert("Player two has won");
+                setArray({
+                    squares: Array(42).fill(null),
+                    isPlayerOneNext: true
+                })
+                return;
+            } else {
+                return;
+            }
         }
         if(newIndex === undefined) 
             return;

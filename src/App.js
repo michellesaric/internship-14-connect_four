@@ -23,9 +23,8 @@ function App() {
   };
 
   const setPlayers = (one, two) => {
-    setPlayerOne({...playerOne, name: one});
+    setPlayerOne({...playerTwo, name: one});
     setPlayerTwo({...playerTwo, name: two});
-    console.log(playerOne);
   };
 
   switch(screen) {
